@@ -21,13 +21,3 @@ int main() {
 	waitKey(0);  // Wait for a keystroke in the window
 	return 0;
 }
-
-
-
-
-// int main() {
-//  Mat image;
-//  cout << "OpenCV HelloWorld!!" << endl;
-//  system("pause");
-//  return 0;
-// }
