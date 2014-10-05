@@ -32,6 +32,17 @@ int main(int, char**) {
 	M.create(4, 4, CV_8UC(2));
 	cout << "M = " << endl << " " << M << endl << endl;
 
+	//////////////////////////////////////////////////////////////////////////
+	Mat A;
+	cout << "*refcount = " << (*M.refcount) << " should be 1" << endl;
+	A = M;
+	cout << "*refcount = " << (*M.refcount) << " should be 2" << endl;
+	Mat B(M);
+	cout << "*refcount = " << (*M.refcount) << " should be 3" << endl;
+	M.release();
+	cout << "refcount ptr = " << (M.refcount) << " should be 0" << endl;
+	system("pause");
+
 	//////////////////////////////////////////////////////////////////////////	
 	// 	Mat M(row,
 	// 		column,
